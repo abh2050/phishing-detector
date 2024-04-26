@@ -45,7 +45,7 @@ if st.button('Check for Phishing'):
             st.error('The URL is potentially phishing.')
 
         # Display the probability of the prediction
-        st.write('Phishing Probability:', loaded_model.predict_proba(vectorized_url)[0][1])
+        st.write('Not Phishing Probability:', loaded_model.predict_proba(vectorized_url)[0][1])
     else:
         st.warning('Please enter a URL before checking for phishing.')
 
