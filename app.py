@@ -66,4 +66,4 @@ for example_url in example_urls:
             st.success('The URL is likely safe.')
         else:
             st.error('The URL is potentially phishing.')
-        st.write('Phishing Probability:', loaded_model.predict_proba(vectorized_url)[0][1])
+        st.write('Not Phishing Probability:', loaded_model.predict_proba(vectorized_url)[0][1])
