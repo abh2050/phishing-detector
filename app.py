@@ -52,6 +52,7 @@ if st.button('Check for Phishing'):
 # Examples
 st.subheader('Examples to Try:')
 example_urls = [
+    "https://www.facebook.com/",
     "http://example.com/verify/account",
     "https://en.wikipedia.org",
     "http://securelogin.netflix.access.com"
@@ -66,4 +67,4 @@ for example_url in example_urls:
             st.success('The URL is likely safe.')
         else:
             st.error('The URL is potentially phishing.')
-        st.write('Not Phishing Probability:', loaded_model.predict_proba(vectorized_url)[0][1])
+
